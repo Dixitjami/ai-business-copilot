@@ -48,3 +48,16 @@ uvicorn main:app --reload
 # Frontend
 cd ../frontend
 open index.html
+
+📌 Future Improvements
+Add authentication (JWT)
+Deploy to cloud (Vercel + Render)
+Add vector database (FAISS/Chroma)
+Improve UI/UX with chat interface
+💼 Use Case
+
+Designed for businesses to:
+
+Analyze documents
+Automate workflows
+Extract insights from data
