@@ -8,9 +8,9 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.database import MemoryStore
-from backend.models import ChatRequest, ChatResponse, UploadResponse
-from backend.rag import RAGPipeline
+from database import MemoryStore
+from models import ChatRequest, ChatResponse, UploadResponse
+from rag import RAGPipeline
 
 
 BASE_DIR = Path(__file__).resolve().parent
