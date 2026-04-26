@@ -1,0 +1,21 @@
+INFO:     127.0.0.1:62349 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51866 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55873 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65402 - "OPTIONS /chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65402 - "POST /chat HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:59653 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59654 - "GET /products?limit=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59655 - "POST /chat HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:64708 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64708 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61512 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56440 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50600 - "GET /memory/demo-user?limit=6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59121 - "GET /products?limit=6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59289 - "GET /appointments/demo-user HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49676 - "OPTIONS /chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49676 - "POST /chat HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:62654 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62654 - "GET /memory/demo-user?limit=6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56591 - "GET /appointments/demo-user HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65198 - "GET /products?limit=6 HTTP/1.1" 200 OK

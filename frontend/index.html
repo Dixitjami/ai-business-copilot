@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business RAG Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">RAG + Memory + Agent Tools</p>
+        <h1>AI business assistant for your documents and workflows.</h1>
+        <p class="hero-copy">
+          Upload PDFs, ask grounded questions, keep conversation history, and let the assistant book appointments or find product details.
+        </p>
+      </section>
+
+      <section class="workspace" aria-label="Assistant workspace">
+        <aside class="control-panel">
+          <div>
+            <p class="panel-kicker">Setup</p>
+            <h2>Knowledge Base</h2>
+            <p class="muted">Use one user ID to keep memory separated across conversations.</p>
+          </div>
+
+          <label class="field-label" for="apiBaseUrl">API URL</label>
+          <input id="apiBaseUrl" class="text-input" type="text" autocomplete="off" />
+
+          <label class="field-label" for="userId">User ID</label>
+          <input id="userId" class="text-input" type="text" value="demo-user" autocomplete="off" />
+
+          <form id="uploadForm" class="upload-card">
+            <label class="file-label" for="pdfFile">
+              <span>Upload PDF</span>
+              <small>PDF files only</small>
+            </label>
+            <input id="pdfFile" type="file" accept="application/pdf" required />
+            <button type="submit" class="secondary-button">Index Document</button>
+          </form>
+
+          <div id="uploadStatus" class="status-card">No document indexed yet.</div>
+
+          <section class="data-card" aria-labelledby="memoryHeading">
+            <div class="section-head">
+              <div>
+                <p class="panel-kicker">Live State</p>
+                <h3 id="memoryHeading">Recent memory</h3>
+              </div>
+              <button id="refreshDataButton" type="button" class="icon-button" aria-label="Refresh data">Refresh</button>
+            </div>
+            <div id="memoryList" class="list-stack empty-state">No conversation history yet.</div>
+          </section>
+
+          <section class="data-card" aria-labelledby="appointmentsHeading">
+            <div class="section-head">
+              <div>
+                <p class="panel-kicker">Agent Tools</p>
+                <h3 id="appointmentsHeading">Appointments</h3>
+              </div>
+            </div>
+            <div id="appointmentsList" class="list-stack empty-state">No appointments booked yet.</div>
+          </section>
+
+          <section class="data-card" aria-labelledby="productsHeading">
+            <div class="section-head">
+              <div>
+                <p class="panel-kicker">Catalog</p>
+                <h3 id="productsHeading">Products</h3>
+              </div>
+            </div>
+            <div id="productsList" class="list-stack empty-state">Product catalog unavailable.</div>
+          </section>
+
+          <div class="tip-card">
+            <strong>Try asking:</strong>
+            <span>Summarize the uploaded PDF.</span>
+            <span>Book a demo with Dixit tomorrow at 4 PM.</span>
+            <span>Which plan is best for automation?</span>
+          </div>
+        </aside>
+
+        <section class="chat-panel">
+          <div id="messages" class="messages" aria-live="polite">
+            <article class="message assistant">
+              <div class="avatar">AI</div>
+              <div class="bubble">
+                <p>Hello. Upload a PDF or ask about products, appointments, and business data.</p>
+              </div>
+            </article>
+          </div>
+
+          <form id="chatForm" class="composer">
+            <input
+              id="messageInput"
+              type="text"
+              placeholder="Ask a question about your PDF or business workflow..."
+              autocomplete="off"
+              required
+            />
+            <button id="sendButton" type="submit">Send</button>
+          </form>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
